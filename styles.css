@@ -1,0 +1,163 @@
+/* Reset and Basic Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Body text */
+    color: #333;
+    background: #333;
+}
+
+/* Headings */
+h1, h2, h3, h4, nav { 
+    font-family: 'Outfit', sans-serif; /* Use Outfit for headings */
+    font-weight: bold;
+}
+
+/* Typography */
+h1 {
+    font-size: 250%;
+    margin-bottom: 1em;
+}
+
+h2 {
+    font-size: 170%;
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-size: 135%;
+    margin-bottom: 1em;
+}
+
+h4 {
+    font-size: 115%;
+    margin-bottom: .5em;
+}
+
+p {
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+a {
+    color: #4574b5;
+}
+
+.social {
+    font-size: 175%;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Additional Section Specific Rules */
+.primary { background: #b5b5b5; }
+.secondary { background: #efefef; }
+
+header {
+    padding: 20px;
+}
+
+header .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+}
+
+#logo {
+    margin-right: 20px;
+}
+
+#mainnav ul {
+    display: flex;
+    justify-content: center;
+}
+
+#mainnav ul li a {
+    display: block;
+    color: #4574b5;
+    border-left: 2px solid #4574b5;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+#mainnav ul li:first-of-type a {
+    border: none;
+}
+
+/* Work Section */
+#work {
+    background: #fff;
+    padding: 20px;
+}
+
+#work img, .additional-projects img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.featured, .projects, #page-template #work section {
+    margin-bottom: 40px;
+}
+
+#about-contact, .additional-projects {
+    padding: 20px;
+}
+
+#about-contact img {
+    margin-bottom: 10px;
+}
+
+footer {
+    padding: 20px;
+    margin-bottom: 600px;
+}
+
+/* Responsive Grid */
+@media only screen and (min-width: 650px) {
+    .projects, #page-template #work section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .projects article, #page-template #work section article {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .featured {
+        display: flex;
+    }
+
+    .featured article {
+        flex: 1;
+    }
+
+    .additional-projects article {
+        width: 25%;
+    }
+
+    #about-contact .wrapper {
+        flex-wrap: nowrap;
+    }
+
+    #about-contact article:last-of-type {
+        flex: 2;
+        flex-basis: 0;
+    }
+}
+
+@media only screen and (min-width: 1040px) {
+    .wrapper {
+        width: 1020px;
+        margin: auto;
+    }
+
+    .projects article {
+        width: 25%;
+    }
+}
